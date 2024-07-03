@@ -1,0 +1,39 @@
+<form [formGroup]="produtoForm" (ngSubmit)="onSubmit()">
+  <app-grid>
+    <app-cell [col]="6" [colTablet]="8" [colPhone]="4">
+      <mat-form-field appearance="outline">
+        <mat-label>Descrição</mat-label>
+        <input matInput formControlName="descricao" />
+      </mat-form-field>
+    </app-cell>
+    <app-cell [col]="2" [colTablet]="3" [colPhone]="4">
+      <mat-form-field appearance="outline">
+        <mat-label>Valor</mat-label>
+        <input
+          matInput
+          formControlName="valor"
+          currencyMask
+          [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+        />
+      </mat-form-field>
+    </app-cell>
+    <app-cell [col]="2" [colTablet]="3" [colPhone]="4">
+      <mat-form-field appearance="outline">
+        <mat-label>Entrada/Saída</mat-label>
+        <mat-select formControlName="tipo">
+          <mat-option value="Entrada">Entrada</mat-option>
+          <mat-option value="Saida">Saída</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </app-cell>
+    <app-cell [col]="2" [colTablet]="2" [colPhone]="4">
+      <button
+        mat-flat-button
+        type="submit"
+        [disabled]="!produtoForm.valid || !produtoForm.dirty"
+      >
+        Salvar
+      </button>
+    </app-cell>
+  </app-grid>
+</form>

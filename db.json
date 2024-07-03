@@ -1,0 +1,102 @@
+{
+  "cashflow": [
+    {
+      "id": "ce6a",
+      "descricao": "desc",
+      "valor": 1.23,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T17:22:01.068Z"
+    },
+    {
+      "id": "0c4a",
+      "descricao": "desc 02",
+      "valor": 4.56,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T17:23:15.125Z"
+    },
+    {
+      "id": "eaab",
+      "descricao": "des",
+      "valor": 516.51,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T19:47:14.757Z"
+    },
+    {
+      "id": "04f2",
+      "descricao": "desc3",
+      "valor": 1532.15,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T21:24:03.060Z"
+    },
+    {
+      "id": "9dea",
+      "descricao": "des4",
+      "valor": 8000,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T21:36:07.644Z"
+    },
+    {
+      "id": "94ad",
+      "descricao": "des4",
+      "valor": 5.1,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T21:38:50.458Z"
+    },
+    {
+      "id": "7981",
+      "descricao": "des5",
+      "valor": 859.64,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T21:42:10.638Z"
+    },
+    {
+      "id": "151e",
+      "descricao": "desc6",
+      "valor": 56.41,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T21:44:02.260Z"
+    },
+    {
+      "id": "ace0",
+      "descricao": "desc7",
+      "valor": 6514.56,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T21:45:56.032Z"
+    },
+    {
+      "id": "4744",
+      "descricao": "desc8",
+      "valor": 231,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T21:48:03.019Z"
+    },
+    {
+      "id": "3e54",
+      "descricao": "desc9",
+      "valor": 311.32,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T21:52:21.477Z"
+    },
+    {
+      "id": "d2e6",
+      "descricao": "desc10",
+      "valor": 3210,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T21:57:12.292Z"
+    },
+    {
+      "id": "3981",
+      "descricao": "desc11",
+      "valor": 0.54,
+      "tipo": "SAIDA",
+      "data": "2024-07-03T22:21:20.942Z"
+    },
+    {
+      "id": "7f72",
+      "descricao": "desc12",
+      "valor": 57.2,
+      "tipo": "ENTRADA",
+      "data": "2024-07-03T22:21:27.500Z"
+    }
+  ]
+}

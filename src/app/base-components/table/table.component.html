@@ -1,0 +1,51 @@
+<div class="example-container mat-elevation-z8">
+  <div class="example-table-container">
+    <table
+      mat-table
+      matSort
+      matSortActive="created"
+      matSortDisableClear
+      matSortDirection="desc"
+    >
+      <thead>
+        <tr>
+          <!-- <th
+            scope="col"
+            class="ordenation-column"
+            *ngIf="ordenation"
+            style="width: 8rem"
+          >
+            Ordem
+          </th> -->
+          <ng-container
+            *ngIf="headerTemplateRef"
+            [ngTemplateOutlet]="headerTemplateRef"
+          >
+          </ng-container>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of dataSource">
+          <ng-container
+            *ngIf="bodyTemplateRef"
+            [ngTemplateOutlet]="bodyTemplateRef"
+            [ngTemplateOutletContext]="{ $implicit: item }"
+          >
+          </ng-container>
+        </tr>
+        <tr *ngIf="!dataSource.length">
+          <td>
+            <p class="empty-table">{{ textEmpty }}</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- <mat-paginator
+    [length]="resultsLength"
+    [pageSize]="30"
+    aria-label="Select page of GitHub search results"
+  ></mat-paginator> -->
+</div>
