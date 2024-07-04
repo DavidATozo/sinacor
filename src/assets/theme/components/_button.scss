@@ -1,0 +1,61 @@
+@import "src/assets/theme/variaveis";
+
+.mat-button,
+.mat-raised-button,
+.mat-stroked-button,
+.mat-flat-button {
+    border-radius: 10px !important;
+    margin: 5px !important;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    min-width: 110px !important;
+}
+
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab {
+  background-color: $primary-color;
+}
+
+.mat-stroked-button {
+  color: #777777;
+  &:not(.mat-button-disabled) {
+    border-color: #777777;
+  }
+}
+
+.mat-flat-button {
+  color: white;
+}
+
+.white-button.mat-button,
+.white-button.mat-raised-button,
+.white-button.mat-stroked-button,
+.white-button.mat-flat-button,
+.white-button.mat-button .mat-button-focus-overlay,
+.white-button.mat-raised-button .mat-button-focus-overlay,
+.white-button.mat-stroked-button .mat-button-focus-overlay,
+.white-button.mat-flat-button .mat-button-focus-overlay {
+  background-color: white;
+}
+
+@keyframes spinner {
+  to {transform: rotate(360deg);}
+}
+ 
+.spinner:before {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  border-top-color: $primary-color;
+  animation: spinner .8s linear infinite;
+}
+

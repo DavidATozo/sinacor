@@ -81,8 +81,8 @@
               disableClear
             ></th>
             <td mat-cell *matCellDef="let row" style="text-align: end">
-              <button mat-raised-button (click)="edit(row)">Editar</button
-              ><button mat-raised-button (click)="delete(row)">Excluir</button>
+              <button mat-stroked-button (click)="edit(row)" class="edit-button"><mat-icon fontIcon="edit"></mat-icon>Editar</button>
+              <button mat-stroked-button (click)="delete(row)" class="delete-button"><mat-icon fontIcon="delete_forever"></mat-icon>Excluir</button>
             </td>
           </ng-container>
 

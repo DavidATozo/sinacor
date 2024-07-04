@@ -1,0 +1,25 @@
+@import "../variaveis";
+
+.default-dialog {
+  .mat-dialog-container {
+    border-radius: 30px;
+  }
+}
+
+//PHONE
+@media (max-width: 479px) {
+    .default-dialog {
+    .mat-dialog-container {
+      border-radius: 0px !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 100% !important;
+      min-height: 100% !important;
+    }
+
+    .mat-dialog-content {
+      max-height: min-content;
+  }
+  }
+}

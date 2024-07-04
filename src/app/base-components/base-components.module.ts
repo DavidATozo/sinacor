@@ -16,8 +16,9 @@ import { CurrencyMaskModule } from 'ng2-currency-mask';
 import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
-
-
+import { DialogEditCashFlowComponent } from './dialog-edit-cash-flow/dialog-edit-cash-flow.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MatButtonModule } from '@angular/material/button';
     CellComponent,
     ContainerComponent,
     CashFlowComponent,
-    TableComponent
+    TableComponent,
+    DialogEditCashFlowComponent
   ],
   imports: [
     CommonModule,
@@ -37,14 +39,17 @@ import { MatButtonModule } from '@angular/material/button';
     MatSelectModule,
     CurrencyMaskModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule,
+    MatProgressSpinnerModule
   ],
   exports: [
     GridComponent,
     CellComponent,
     ContainerComponent,
     CashFlowComponent,
-    TableComponent
+    TableComponent,
+    DialogEditCashFlowComponent
   ]
 })
 export class BaseComponentsModule { }

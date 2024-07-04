@@ -1,7 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core'; 
 import { CashFlow } from '@services/cash-flow-service/cash-flow.model';
 import { CashFlowService } from '@services/cash-flow-service/cash-flow.service';
-import { Subject, takeUntil } from 'rxjs';
+import { Subject, filter, takeUntil } from 'rxjs';
+
+import { MatDialog } from '@angular/material/dialog';
+import { DialogEditCashFlowComponent } from '@base-components/dialog-edit-cash-flow/dialog-edit-cash-flow.component';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +25,10 @@ export class AppComponent implements OnInit, OnDestroy {
   totalSaidasFormatted: string = '';
   totalFormatted: string = '';
 
-  constructor(private cashFlowService: CashFlowService) {}
+  constructor(
+    private cashFlowService: CashFlowService,
+    private dialog: MatDialog
+  ) {}
 
   private readonly unsubscribe = new Subject<void>();
 
@@ -68,19 +74,24 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   edit(cashFlow: CashFlow) {
-    console.log('cashFlow: ', cashFlow);
-    this.cashFlowService.editCashFlow(cashFlow).subscribe((res: CashFlow) => {
-      console.log('res:', res);
-      this.getCashFlow();
-    });
+    this.dialog.open(DialogEditCashFlowComponent, {
+      width: '70%',
+      maxHeight: '95vh',
+      panelClass: 'default-dialog',
+      closeOnNavigation: true,
+      data: {
+        cashFlow: cashFlow
+      }
+    })
+    .afterClosed()
+      .pipe(filter((res) => !!res.saved))
+      .subscribe(() => this.getCashFlow());
   }
 
   delete(cashFlow: CashFlow) {
-    console.log('cashFlow: ', cashFlow);
     this.cashFlowService
       .deleteCashFlow(cashFlow.id as string)
       .subscribe((res: CashFlow) => {
-        console.log('res:', res);
         this.getCashFlow();
       });
   }

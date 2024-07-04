@@ -8,6 +8,11 @@ table {
   }
 }
 
+mat-icon {
+  font-size: 22px;
+  margin: 3px;
+}
+
 .card {
   display: flex;
   align-items: center;
@@ -24,4 +29,14 @@ table {
     margin: 2px;
     font-size: 1.8rem;
   }
+}
+
+.edit-button {
+  border-color: orange;
+  color: orange;
+}
+
+.delete-button {
+  border-color: red;
+  color: red;
 }
