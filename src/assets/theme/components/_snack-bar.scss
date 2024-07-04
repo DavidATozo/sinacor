@@ -1,0 +1,22 @@
+@import "../variaveis";
+
+//----------SnackBar----------
+.mat-snack-bar-container.ass-snack {
+  background-color: black;
+  color: white;
+
+  &.success {
+    background-color: #26E055;
+  }
+
+  &.error {
+    background-color: #FF4040;
+  }
+}
+.mat-snack-bar-container {
+  max-width: 100% !important;
+}
+
+.mat-progress-spinner circle, .mat-spinner circle {
+  stroke: #DDDDDD;
+}

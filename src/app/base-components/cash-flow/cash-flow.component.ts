@@ -1,8 +1,10 @@
 import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { CashFlowService } from '@services/cash-flow-service/cash-flow.service';
 import { CashFlow } from '@services/cash-flow-service/cash-flow.model';
 import { Subject, takeUntil } from 'rxjs';
+import { SnackbarService } from '@services/snackBar/snackbar.service';
 
 @Component({
   selector: 'app-cash-flow',
@@ -17,7 +19,10 @@ export class CashFlowComponent implements OnInit, OnDestroy {
 
   produtoForm!: FormGroup;
 
-  constructor(private cashFlowService: CashFlowService) {}
+  constructor(
+    private cashFlowService: CashFlowService,
+    private snackBar: SnackbarService
+  ) {}
 
   ngOnInit(): void {
     this.produtoForm = new FormGroup({
@@ -57,7 +62,15 @@ export class CashFlowComponent implements OnInit, OnDestroy {
       this.produtoForm.controls['tipo'].clearValidators();
       this.produtoForm.controls['tipo'].updateValueAndValidity();
 
+      this.snackBar.showSuccess('', 'Adicionado com sucesso!');
       this.fnNewCashFlow.emit(true);      
-    });
+    },
+    (_) => {
+      this.snackBar.showError(
+        'Não foi possível adicionar.',
+        'Tente novamente!'
+      );
+    }
+  );
   }
 }

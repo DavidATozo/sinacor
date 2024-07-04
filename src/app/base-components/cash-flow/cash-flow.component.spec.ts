@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CashFlowComponent } from './cash-flow.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('CashFlowComponent', () => {
   let component: CashFlowComponent;
@@ -8,7 +9,12 @@ describe('CashFlowComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CashFlowComponent ]
+      imports: [
+        HttpClientTestingModule
+      ],
+      declarations: [
+        CashFlowComponent
+      ],
     })
     .compileComponents();
 

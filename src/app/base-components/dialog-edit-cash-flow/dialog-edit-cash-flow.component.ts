@@ -1,8 +1,10 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { CashFlow } from '@services/cash-flow-service/cash-flow.model';
 import { CashFlowService } from '@services/cash-flow-service/cash-flow.service';
+import { SnackbarService } from '@services/snackBar/snackbar.service';
 import { Subject, takeUntil } from 'rxjs';
 
 export interface DialogEditCashFlowData {
@@ -22,7 +24,8 @@ export class DialogEditCashFlowComponent implements OnInit, OnDestroy {
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: DialogEditCashFlowData,
     private dialogRef: MatDialogRef<DialogEditCashFlowComponent>,
-    private cashFlowService: CashFlowService
+    private cashFlowService: CashFlowService,
+    private snackBar: SnackbarService
   ) {}
 
   ngOnInit(): void {
@@ -34,13 +37,13 @@ export class DialogEditCashFlowComponent implements OnInit, OnDestroy {
     });
 
     this.produtoForm.controls['descricao'].patchValue(
-      this.data.cashFlow.descricao
+      this.data.cashFlow?.descricao
     );
-    this.produtoForm.controls['valor'].patchValue(this.data.cashFlow.valor);
-    if (this.data.cashFlow.tipo === 'ENTRADA') {
+    this.produtoForm.controls['valor'].patchValue(this.data.cashFlow?.valor);
+    if (this.data.cashFlow?.tipo === 'ENTRADA') {
       this.produtoForm.controls['tipo'].patchValue('Entrada');
     } else {
-      if (this.data.cashFlow.tipo === 'SAIDA') {
+      if (this.data.cashFlow?.tipo === 'SAIDA') {
         this.produtoForm.controls['tipo'].patchValue('Saida');
       }
     }
@@ -63,8 +66,16 @@ export class DialogEditCashFlowComponent implements OnInit, OnDestroy {
     this.cashFlowService
       .editCashFlow(produto)
       .pipe(takeUntil(this.unsubscribe))
-      .subscribe((res: CashFlow) => {
+      .subscribe((_) => {
+        this.snackBar.showSuccess('', 'Editado com sucesso!');
         this.dialogRef.close({ saved: true });
-      });
+      },
+      (_) => {
+        this.snackBar.showError(
+          'Não foi possível editar.',
+          'Tente novamente!'
+        );
+      }
+    );
   }
 }

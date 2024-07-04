@@ -7,15 +7,6 @@ describe('ExchangeRateService', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ExchangeRateService);
-  });
-
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-
-  beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [ExchangeRateService]
@@ -28,7 +19,7 @@ describe('ExchangeRateService', () => {
     httpMock.verify();
   });
 
-  it('deve ser criado', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
   });
 

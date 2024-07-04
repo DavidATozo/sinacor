@@ -18,6 +18,9 @@ import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogEditCashFlowComponent } from './dialog-edit-cash-flow/dialog-edit-cash-flow.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
@@ -27,7 +30,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ContainerComponent,
     CashFlowComponent,
     TableComponent,
-    DialogEditCashFlowComponent
+    DialogEditCashFlowComponent,
+    SnackBarComponent
   ],
   imports: [
     CommonModule,
@@ -41,6 +45,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatTableModule,
     MatButtonModule,
     MatDialogModule,
+    MatSnackBarModule,
+    MatIconModule,
     MatProgressSpinnerModule
   ],
   exports: [
@@ -49,7 +55,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     ContainerComponent,
     CashFlowComponent,
     TableComponent,
-    DialogEditCashFlowComponent
+    DialogEditCashFlowComponent,
+    SnackBarComponent
   ]
 })
 export class BaseComponentsModule { }

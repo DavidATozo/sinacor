@@ -5,6 +5,7 @@ import { Subject, filter, takeUntil } from 'rxjs';
 
 import { MatDialog } from '@angular/material/dialog';
 import { DialogEditCashFlowComponent } from '@base-components/dialog-edit-cash-flow/dialog-edit-cash-flow.component';
+import { SnackbarService } from '@services/snackBar/snackbar.service';
 
 @Component({
   selector: 'app-root',
@@ -27,7 +28,8 @@ export class AppComponent implements OnInit, OnDestroy {
 
   constructor(
     private cashFlowService: CashFlowService,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private snackBar: SnackbarService
   ) {}
 
   private readonly unsubscribe = new Subject<void>();
@@ -47,7 +49,14 @@ export class AppComponent implements OnInit, OnDestroy {
     .subscribe((cashFlow) => {
       this.datasource = cashFlow;
       this.updateValues();
-    });
+    },
+    (_) => {
+      this.snackBar.showError(
+        'Não foi possível obter os dados.',
+        'Tente novamente!'
+      );
+    }
+  );
   }
 
   updateValues() {
@@ -91,8 +100,17 @@ export class AppComponent implements OnInit, OnDestroy {
   delete(cashFlow: CashFlow) {
     this.cashFlowService
       .deleteCashFlow(cashFlow.id as string)
+      .pipe(takeUntil(this.unsubscribe))
       .subscribe((res: CashFlow) => {
+        this.snackBar.showSuccess('', 'Deletado com sucesso!');
         this.getCashFlow();
-      });
+      },
+      (_) => {
+        this.snackBar.showError(
+          'Não foi possível deletar.',
+          'Tente novamente!'
+        );
+      }
+    );
   }
 }

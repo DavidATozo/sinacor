@@ -16,10 +16,10 @@
     },
     {
       "id": "eaab",
-      "descricao": "des",
+      "descricao": "desc",
       "valor": 516.51,
       "tipo": "ENTRADA",
-      "data": "2024-07-03T19:47:14.757Z"
+      "data": "2024-07-04T18:00:07.083Z"
     },
     {
       "id": "04f2",
@@ -34,13 +34,6 @@
       "valor": 8000,
       "tipo": "ENTRADA",
       "data": "2024-07-04T13:12:10.811Z"
-    },
-    {
-      "id": "94ad",
-      "descricao": "des4",
-      "valor": 5.1,
-      "tipo": "ENTRADA",
-      "data": "2024-07-03T21:38:50.458Z"
     },
     {
       "id": "7981",
@@ -125,6 +118,48 @@
       "valor": 560,
       "tipo": "SAIDA",
       "data": "2024-07-04T14:08:05.705Z"
+    },
+    {
+      "id": "84cc",
+      "descricao": "desc18",
+      "valor": 4.5,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T16:42:52.623Z"
+    },
+    {
+      "id": "b149",
+      "descricao": "desc18",
+      "valor": 15.15,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T16:43:51.767Z"
+    },
+    {
+      "id": "f6df",
+      "descricao": "desc19",
+      "valor": 1.56,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T16:45:14.566Z"
+    },
+    {
+      "id": "9d12",
+      "descricao": "desc20",
+      "valor": 15.6,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T16:48:03.171Z"
+    },
+    {
+      "id": "915c",
+      "descricao": "desc21",
+      "valor": 5687.54,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T16:53:25.694Z"
+    },
+    {
+      "id": "faff",
+      "descricao": "desc22",
+      "valor": 56.41,
+      "tipo": "ENTRADA",
+      "data": "2024-07-04T17:59:15.040Z"
     }
   ]
 }
