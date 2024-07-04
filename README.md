@@ -1,27 +1,25 @@
-# Sinacor
+# Projeto Angular para Sinacor
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
+Este projeto é desenvolvido para a empresa Sinacor e utiliza Angular 14 para a construção da aplicação.
 
-## Development server
+## Como Executar o Projeto
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Para executar este projeto, siga os passos abaixo:
 
-## Code scaffolding
+1. **Simulação do Servidor com json-server:**
+   Antes de iniciar a aplicação Angular, é necessário iniciar o servidor de simulação de API usando `json-server`.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   ```bash
+   npx json-server db.json
 
-## Build
+Isso irá iniciar o servidor de simulação com base no arquivo db.json fornecido.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+2. **Inicialização da Aplicação Angular:**
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    Após iniciar o servidor com json-server, você pode iniciar a aplicação Angular usando o seguinte comando:
 
-## Running end-to-end tests
+    ```bash
+    npm start
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Este comando irá compilar a aplicação.
