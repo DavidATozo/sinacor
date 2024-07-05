@@ -1,0 +1,37 @@
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { DialogEditCashFlowComponent } from './dialog-edit-cash-flow.component';
+import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+describe('DialogEditCashFlowComponent', () => {
+  let component: DialogEditCashFlowComponent;
+  let fixture: ComponentFixture<DialogEditCashFlowComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        MatDialogModule,
+        HttpClientTestingModule,
+        MatSnackBarModule
+      ],
+      declarations: [
+        DialogEditCashFlowComponent
+      ],
+      providers: [
+        { provide: MAT_DIALOG_DATA, useValue: {} }, 
+        { provide: MatDialogRef, useValue: {} } 
+      ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(DialogEditCashFlowComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

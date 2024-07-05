@@ -1,0 +1,50 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mensagem {
+    margin: 0px 20px 0px 0px;
+    &__title {
+      font-weight: 500;
+    }
+  
+    &__body {
+      font-weight: 400;
+    }
+  }
+  
+  .boxClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+  }
+  
+  .btn-close {
+    margin-block-end: auto;
+    cursor: pointer;
+    font-size: 13px;
+    position: absolute;
+    top: 5px;
+    right: 6px;
+    z-index: 500;
+    margin: 0;
+    width: auto;
+    height: auto;
+  }
+  
+  .img {
+    padding-right: 27px;
+  }
+  
+  mat-icon {
+    color: white;
+    margin-right: 16px;
+    height: 32px;
+    width: 32px;
+    font-size: 32px;
+  }
+  

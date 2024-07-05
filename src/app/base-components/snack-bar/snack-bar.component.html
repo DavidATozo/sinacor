@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <mat-icon >{{ data.icon }}</mat-icon>
+    <div id="snack-bar-content">
+      <h5 class="mensagem mensagem__title">{{data.title}}</h5>
+      <h5 class="mensagem mensagem__body">{{data.message}}</h5>
+    </div>
+    <div class="boxClose">
+      <mat-icon class="btn-close" (click)="snackBarRef.dismiss()">close</mat-icon>
+      <mat-progress-spinner [value]="porcentage" strokeWidth="3" diameter="24" class="spinnerClose">
+      </mat-progress-spinner>
+    </div>
+  </div>
+  
