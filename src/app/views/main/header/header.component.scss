@@ -8,3 +8,17 @@
     right: 12px;
     font-size: 1.2rem;
 }
+
+.phone {
+    display: none;
+}
+
+@media (max-width: 479px) {
+    .phone {
+        display: block;
+    }
+
+    .screen {
+        display: none;
+    }
+}

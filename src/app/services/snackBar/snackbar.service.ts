@@ -3,12 +3,15 @@ import {
   MatSnackBar,
   MatSnackBarConfig,
   MatSnackBarHorizontalPosition,
-  MatSnackBarVerticalPosition
+  MatSnackBarVerticalPosition,
 } from '@angular/material/snack-bar';
-import { SnackBarComponent, SnackBarData } from '@base-components/snack-bar/snack-bar.component';
+import {
+  SnackBarComponent,
+  SnackBarData,
+} from '@base-components/snack-bar/snack-bar.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SnackbarService {
   horizontalPosition: MatSnackBarHorizontalPosition = 'end';
@@ -51,7 +54,7 @@ export class SnackbarService {
     config.data = {
       title,
       message,
-      icon
+      icon,
     };
     return config;
   }

@@ -29,7 +29,6 @@ export class DialogEditCashFlowComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
-    console.log('this.data.cashFlow: ', this.data?.cashFlow);
     this.produtoForm = new FormGroup({
       descricao: new FormControl('', [Validators.required]),
       valor: new FormControl('', [Validators.required, Validators.min(0)]),

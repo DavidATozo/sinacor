@@ -1,12 +1,17 @@
-import { Component, ContentChild, Input, OnInit, TemplateRef } from '@angular/core';
+import {
+  Component,
+  ContentChild,
+  Input,
+  OnInit,
+  TemplateRef,
+} from '@angular/core';
 
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
-  styleUrls: ['./table.component.scss']
+  styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
-
   @Input() textEmpty = 'Nenhum registro encontrado';
 
   _dataSource: Array<any> = [];
@@ -26,9 +31,7 @@ export class TableComponent implements OnInit {
   @ContentChild('body', { static: false })
   bodyTemplateRef!: TemplateRef<any>;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

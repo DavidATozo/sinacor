@@ -160,6 +160,13 @@
       "valor": 56.41,
       "tipo": "ENTRADA",
       "data": "2024-07-04T17:59:15.040Z"
+    },
+    {
+      "id": "d3cd",
+      "descricao": "desc25",
+      "valor": 651,
+      "tipo": "SAIDA",
+      "data": "2024-07-04T21:37:05.130Z"
     }
   ]
 }

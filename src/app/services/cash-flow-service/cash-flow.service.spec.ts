@@ -70,11 +70,11 @@ describe('CashFlowService', () => {
     const idToDelete = '1';
 
     service.deleteCashFlow(idToDelete).subscribe(cashFlow => {
-      expect(cashFlow).toBeNull(); // Assuming delete returns null or undefined
+      expect(cashFlow).toBeNull();
     });
 
     const req = httpMock.expectOne(`${environment.API}/cashflow/${idToDelete}`);
     expect(req.request.method).toBe('DELETE');
-    req.flush(null); // Assuming delete returns null or undefined
+    req.flush(null); 
   });
 });

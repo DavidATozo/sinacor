@@ -45,13 +45,10 @@ export class CashFlowComponent implements OnInit, OnDestroy {
       tipo: this.produtoForm.value.tipo.toUpperCase(),
       data: new Date(),
     };
-    console.log('Produto enviado2:', produto);
 
     this.cashFlowService.createCashFlow(produto)
     .pipe(takeUntil(this.unsubscribe))
     .subscribe((res) => {
-      console.log(res);
-      
       this.produtoForm.controls['descricao'].patchValue('');
       this.produtoForm.controls['descricao'].clearValidators();
       this.produtoForm.controls['descricao'].updateValueAndValidity();

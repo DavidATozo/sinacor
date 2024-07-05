@@ -22,6 +22,9 @@ import { SnackBarComponent } from './snack-bar/snack-bar.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { DateFilterComponent } from './date-filter/date-filter.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CashFlowComponent,
     TableComponent,
     DialogEditCashFlowComponent,
-    SnackBarComponent
+    SnackBarComponent,
+    DateFilterComponent
   ],
   imports: [
     CommonModule,
@@ -47,7 +51,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatDialogModule,
     MatSnackBarModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     GridComponent,
@@ -56,7 +62,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     CashFlowComponent,
     TableComponent,
     DialogEditCashFlowComponent,
-    SnackBarComponent
+    SnackBarComponent,
+    DateFilterComponent
   ]
 })
 export class BaseComponentsModule { }
