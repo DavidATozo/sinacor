@@ -1,172 +1,32 @@
 {
   "cashflow": [
     {
-      "id": "ce6a",
-      "descricao": "desc01 tested",
-      "valor": 1.23,
+      "id": "a2b0",
+      "descricao": "desc01",
+      "valor": 100,
       "tipo": "ENTRADA",
-      "data": "2024-07-04T14:13:44.122Z"
+      "data": "2024-07-05T13:16:22.630Z"
     },
     {
-      "id": "0c4a",
-      "descricao": "desc 02",
-      "valor": 4.56,
+      "id": "4547",
+      "descricao": "desc02",
+      "valor": 50,
       "tipo": "SAIDA",
-      "data": "2024-07-03T17:23:15.125Z"
+      "data": "2024-07-05T13:16:36.635Z"
     },
     {
-      "id": "eaab",
-      "descricao": "desc",
-      "valor": 516.51,
+      "id": "10e2",
+      "descricao": "desc03",
+      "valor": 200,
       "tipo": "ENTRADA",
-      "data": "2024-07-04T18:00:07.083Z"
+      "data": "2024-07-05T13:16:53.331Z"
     },
     {
-      "id": "04f2",
-      "descricao": "desc3",
-      "valor": 1532.15,
+      "id": "3994",
+      "descricao": "desc04",
+      "valor": 50,
       "tipo": "SAIDA",
-      "data": "2024-07-03T21:24:03.060Z"
-    },
-    {
-      "id": "9dea",
-      "descricao": "desc4",
-      "valor": 8000,
-      "tipo": "ENTRADA",
-      "data": "2024-07-04T13:12:10.811Z"
-    },
-    {
-      "id": "7981",
-      "descricao": "des5",
-      "valor": 859.64,
-      "tipo": "SAIDA",
-      "data": "2024-07-03T21:42:10.638Z"
-    },
-    {
-      "id": "151e",
-      "descricao": "desc6",
-      "valor": 56.41,
-      "tipo": "SAIDA",
-      "data": "2024-07-03T21:44:02.260Z"
-    },
-    {
-      "id": "ace0",
-      "descricao": "desc7",
-      "valor": 6514.56,
-      "tipo": "SAIDA",
-      "data": "2024-07-03T21:45:56.032Z"
-    },
-    {
-      "id": "4744",
-      "descricao": "desc8",
-      "valor": 231,
-      "tipo": "ENTRADA",
-      "data": "2024-07-03T21:48:03.019Z"
-    },
-    {
-      "id": "3e54",
-      "descricao": "desc9",
-      "valor": 311.32,
-      "tipo": "ENTRADA",
-      "data": "2024-07-03T21:52:21.477Z"
-    },
-    {
-      "id": "d2e6",
-      "descricao": "desc10",
-      "valor": 3210,
-      "tipo": "ENTRADA",
-      "data": "2024-07-03T21:57:12.292Z"
-    },
-    {
-      "id": "3981",
-      "descricao": "desc11",
-      "valor": 0.54,
-      "tipo": "SAIDA",
-      "data": "2024-07-03T22:21:20.942Z"
-    },
-    {
-      "id": "7f72",
-      "descricao": "desc12",
-      "valor": 57.2,
-      "tipo": "ENTRADA",
-      "data": "2024-07-03T22:21:27.500Z"
-    },
-    {
-      "id": "de84",
-      "descricao": "desc14",
-      "valor": 5.6,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T13:57:40.302Z"
-    },
-    {
-      "id": "7974",
-      "descricao": "desc15",
-      "valor": 561.4,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T13:58:31.650Z"
-    },
-    {
-      "id": "50cb",
-      "descricao": "desc16",
-      "valor": 56.1,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T13:59:32.807Z"
-    },
-    {
-      "id": "4fdf",
-      "descricao": "desc17",
-      "valor": 560,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T14:08:05.705Z"
-    },
-    {
-      "id": "84cc",
-      "descricao": "desc18",
-      "valor": 4.5,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T16:42:52.623Z"
-    },
-    {
-      "id": "b149",
-      "descricao": "desc18",
-      "valor": 15.15,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T16:43:51.767Z"
-    },
-    {
-      "id": "f6df",
-      "descricao": "desc19",
-      "valor": 1.56,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T16:45:14.566Z"
-    },
-    {
-      "id": "9d12",
-      "descricao": "desc20",
-      "valor": 15.6,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T16:48:03.171Z"
-    },
-    {
-      "id": "915c",
-      "descricao": "desc21",
-      "valor": 5687.54,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T16:53:25.694Z"
-    },
-    {
-      "id": "faff",
-      "descricao": "desc22",
-      "valor": 56.41,
-      "tipo": "ENTRADA",
-      "data": "2024-07-04T17:59:15.040Z"
-    },
-    {
-      "id": "d3cd",
-      "descricao": "desc25",
-      "valor": 651,
-      "tipo": "SAIDA",
-      "data": "2024-07-04T21:37:05.130Z"
+      "data": "2024-07-05T13:18:52.624Z"
     }
   ]
 }
