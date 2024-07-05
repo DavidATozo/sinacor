@@ -13,7 +13,6 @@ import { CellComponent } from './grid/cell.component';
 import { ContainerComponent } from './grid/container.component';
 import { CashFlowComponent } from './cash-flow/cash-flow.component';
 import { CurrencyMaskModule } from 'ng2-currency-mask';
-import { TableComponent } from './table/table.component';
 import {MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { DialogEditCashFlowComponent } from './dialog-edit-cash-flow/dialog-edit-cash-flow.component';
@@ -32,7 +31,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     CellComponent,
     ContainerComponent,
     CashFlowComponent,
-    TableComponent,
     DialogEditCashFlowComponent,
     SnackBarComponent,
     DateFilterComponent
@@ -60,7 +58,6 @@ import { MatNativeDateModule } from '@angular/material/core';
     CellComponent,
     ContainerComponent,
     CashFlowComponent,
-    TableComponent,
     DialogEditCashFlowComponent,
     SnackBarComponent,
     DateFilterComponent

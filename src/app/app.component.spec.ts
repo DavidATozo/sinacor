@@ -51,13 +51,13 @@ describe('AppComponent', () => {
   });
 
   describe('getCashFlow', () => {
-    it('should set datasource on success', () => {
+    it('should set filteredCashFlow on success', () => {
       const mockCashFlow: CashFlow[] = [{ id: '1', descricao: 'Teste', valor: 100, tipo: 'ENTRADA', data: '2024-07-04' }];
       cashFlowService.getCashFlow.and.returnValue(of(mockCashFlow));
 
       component.getCashFlow();
 
-      expect(component.datasource).toEqual(mockCashFlow);
+      expect(component.filteredCashFlow).toEqual(mockCashFlow);
     });
 
     it('should show error message on failure', () => {
